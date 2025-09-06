@@ -1,0 +1,31 @@
+tree:
+  -
+    id: 3690fcf3-66e4-476f-b0fc-7b1fec79ac03
+    title: school
+    url: /asdf
+    data:
+      links:
+        -
+          id: mf6rrkhg
+          sub_links:
+            -
+              id: mf6rrtd4
+              link_text: Careers
+              link_icon: alert
+              link_url: /test
+              type: new_set
+              enabled: true
+          title: School
+          type: new_set
+          enabled: true
+        -
+          id: mf6rs6fi
+          sub_links:
+            -
+              id: mf6rs79v
+              link_text: twas
+              link_url: /test22
+              type: new_set
+              enabled: true
+          type: new_set
+          enabled: true

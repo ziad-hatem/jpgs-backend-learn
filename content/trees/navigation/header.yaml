@@ -1,0 +1,22 @@
+tree:
+  -
+    id: cca37740-cb06-48e4-b596-f25dc7fd93c6
+    title: 'About JPGS'
+    url: /about
+    data:
+      header_links:
+        -
+          id: mf6oxkn1
+          header_text: 'About JPGS'
+          sub_pages:
+            -
+              id: mf6oxlew
+              sub_page_link: 'Headmaster’s Welcome'
+              sub_page_title: '#Headmaster’s Welcome'
+              type: new_set
+              enabled: true
+          image_text: 'Our academic programme is designed to support students at every stage of their educational journey. It consists of four key stages: Early Years, Prep, Grammar and Sixth Form. From foundational learning in the Early Years to advanced studies in the Sixth Form, we provide a rigorous British curriculum that nurtures intellectual curiosity, critical thinking and personal growth. Each stage is carefully structured to prepare students for academic excellence and future success.'
+          image:
+            - poster.webp
+          type: new_set
+          enabled: true

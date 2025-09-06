@@ -1,0 +1,56 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: header_links
+            field:
+              type: replicator
+              display: header_links
+              sets:
+                header:
+                  display: header
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: header_text
+                          field:
+                            type: text
+                            display: header_text
+                        -
+                          handle: sub_pages
+                          field:
+                            type: replicator
+                            display: 'sub pages'
+                            sets:
+                              sub_pages:
+                                display: sub_pages
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: sub_page_link
+                                        field:
+                                          type: text
+                                          display: 'sub page link'
+                                      -
+                                        handle: sub_page_title
+                                        field:
+                                          type: text
+                                          display: 'sub page title'
+                        -
+                          handle: image_text
+                          field:
+                            type: textarea
+                            display: image_text
+                        -
+                          handle: image
+                          field:
+                            container: assets
+                            type: assets
+                            display: image

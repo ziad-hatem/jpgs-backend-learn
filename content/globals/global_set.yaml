@@ -1,0 +1,16 @@
+title: 'global set'
+data:
+  website_icon: title_icon.svg
+  footer_text: 'Copyright © 2022 - 2025 jpgs. All Rights Reserved'
+  seo_title: jpgs
+  seo_description: 'jpgs description'
+  seo_image: title_icon.svg
+  social_icons:
+    -
+      id: mf6mm4a2
+      icon: add
+      url: 'https://fast.com/'
+      link_text: facebook
+      type: new_set
+      enabled: true
+  seo_keywords: 'jpgs seo keywords'

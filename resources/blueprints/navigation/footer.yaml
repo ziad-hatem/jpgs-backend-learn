@@ -1,0 +1,50 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: links
+            field:
+              type: replicator
+              display: links
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      fields:
+                        -
+                          handle: sub_links
+                          field:
+                            type: replicator
+                            display: 'sub links'
+                            sets:
+                              footer_links:
+                                display: 'footer links'
+                                sets:
+                                  new_set:
+                                    display: 'New Set'
+                                    fields:
+                                      -
+                                        handle: link_text
+                                        field:
+                                          type: text
+                                          display: link_text
+                                      -
+                                        handle: link_icon
+                                        field:
+                                          type: icon
+                                          display: link_icon
+                                      -
+                                        handle: link_url
+                                        field:
+                                          type: text
+                                          display: link_url
+                        -
+                          handle: title
+                          field:
+                            type: text
+                            display: title
