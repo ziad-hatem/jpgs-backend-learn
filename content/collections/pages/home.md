@@ -11,7 +11,7 @@ big_banner_description: 'Begin your child educational journey at Jeddah Prep and
 big_banner_watch_video_btn: 'watch video'
 have_video: true
 updated_by: eb9b0b7d-f5e6-47c2-9adb-34591b4101a9
-updated_at: 1757144111
+updated_at: 1757213057
 banner_image: poster.webp
 banner_header: vzxcv
 big_banner_asset: poster.webp
@@ -60,6 +60,61 @@ our_cores:
     our_cores_header: Resilience
     our_cores_description: 'We cultivate adaptability and perseverance, preparing pupils to face challenges with confidence and courage.'
     type: new_set
+    enabled: true
+have_big_banner: true
+have_small_banner: false
+website_components:
+  -
+    id: mf93937r
+    have_more_than_one_asset: false
+    have_btn: false
+    btn_have_icon: false
+    is_it_welcome: false
+    have_our_cores: false
+    backgroun_have_gradient: false
+    gradient: 'linear-gradient(90deg, #ff7e5f, #feb47b)'
+    type: image_with_text
+    enabled: true
+  -
+    id: mf93976t
+    type: stats
+    enabled: true
+  -
+    id: mf939bgj
+    type: programs
+    enabled: true
+  -
+    id: mf939l8u
+    have_more_than_one_asset: false
+    have_btn: false
+    btn_have_icon: false
+    is_it_welcome: false
+    have_our_cores: false
+    backgroun_have_gradient: false
+    gradient: 'linear-gradient(90deg, #ff7e5f, #feb47b)'
+    type: image_with_text
+    enabled: true
+  -
+    id: mf939pqe
+    type: leadership_swiper
+    enabled: true
+  -
+    id: mf939ugs
+    type: our_achievements
+    enabled: true
+  -
+    id: mf939y7h
+    type: up_to_date_swiper
+    enabled: true
+  -
+    id: mf93a2xv
+    have_btn: false
+    open_in_new_tab: false
+    type: banner_box
+    enabled: true
+  -
+    id: mf93a60i
+    type: where_next
     enabled: true
 ---
 ## Welcome to your brand new Statamic site!

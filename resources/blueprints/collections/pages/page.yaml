@@ -3,295 +3,1434 @@ tabs:
   main:
     display: Main
     sections:
-      -
-        display: big_banner
+      - display: big_banner
         fields:
-          -
-            handle: title
+          - handle: title
             field:
               type: text
               required: true
+              display: title
               validate:
                 - required
-          -
-            handle: big_banner_video_poster
+          - handle: big_banner_video_poster
             field:
               max_files: 1
               container: assets
               type: assets
               display: big_banner_video_poster
-          -
-            handle: big_banner_header
+          - handle: big_banner_header
             field:
               type: text
-              display: 'big banner header'
-          -
-            handle: big_banner_header_icon
+              display: "big banner header"
+          - handle: big_banner_header_icon
             field:
               type: icon
-              display: 'big banner header icon'
-          -
-            handle: big_banner_description
+              display: "big banner header icon"
+          - handle: big_banner_description
             field:
               type: textarea
-              display: 'big banner description'
-          -
-            handle: big_banner_watch_video_btn
+              display: "big banner description"
+          - handle: big_banner_watch_video_btn
             field:
               type: text
-              display: 'big banner watch video btn'
-          -
-            handle: big_banner_asset
+              display: "big banner watch video btn"
+          - handle: big_banner_asset
             field:
               max_files: 1
               container: assets
               type: assets
-              display: 'big banner asset'
-      -
-        display: small_banner
+              display: "big banner asset"
+          - handle: have_big_banner
+            field:
+              type: toggle
+              display: "have big banner"
+      - display: small_banner
         fields:
-          -
-            handle: banner_header
+          - handle: banner_header
             field:
               type: text
-              display: 'banner header'
-          -
-            handle: banner_video_poster
+              display: "banner header"
+          - handle: banner_video_poster
             field:
               max_files: 1
               container: assets
               type: assets
-              display: 'banner video poster'
-          -
-            handle: banner_asset
+              display: "banner video poster"
+          - handle: banner_asset
             field:
               container: assets
               type: assets
-              display: 'banner asset'
+              display: "banner asset"
+          - handle: have_small_banner
+            field:
+              type: toggle
+              display: "have small banner"
   components:
     display: components
     sections:
-      -
-        display: image_with_text
+      - display: "New Section"
         fields:
-          -
-            handle: assets
-            field:
-              max_files: 4
-              container: assets
-              type: assets
-              display: assets
-          -
-            handle: asset_poistion
-            field:
-              options:
-                -
-                  key: left
-                  value: Left
-                -
-                  key: right
-                  value: Right
-              type: select
-              display: 'asset poistion'
-          -
-            handle: asset_width
-            field:
-              type: width
-              display: 'asset width'
-          -
-            handle: icon1
-            field:
-              type: icon
-              display: icon1
-          -
-            handle: icon1_position
-            field:
-              options:
-                -
-                  key: top
-                  value: Top
-                -
-                  key: left
-                  value: Left
-                -
-                  key: bottom
-                  value: Bottom
-                -
-                  key: right
-                  value: Right
-                -
-                  key: top_left
-                  value: 'Top Left'
-                -
-                  key: top_right
-                  value: 'Top Right'
-                -
-                  key: bottom_left
-                  value: 'Bottom Left'
-                -
-                  key: bottom_right
-                  value: 'Bottom Right'
-              type: select
-              display: 'icon1 position'
-          -
-            handle: icon2
-            field:
-              type: icon
-              display: icon2
-          -
-            handle: icon2_position
-            field:
-              options:
-                -
-                  key: top
-                  value: Top
-                -
-                  key: left
-                  value: Left
-                -
-                  key: bottom
-                  value: Bottom
-                -
-                  key: right
-                  value: Right
-                -
-                  key: top_left
-                  value: 'Top Left'
-                -
-                  key: top_right
-                  value: 'Top Right'
-                -
-                  key: bottom_left
-                  value: 'Bottom Left'
-                -
-                  key: bottom_right
-                  value: 'Bottom Right'
-              type: select
-              display: 'icon2 position'
-          -
-            handle: have_more_than_one_asset
-            field:
-              type: toggle
-              display: 'have more than one asset'
-          -
-            handle: more_info
+          - handle: website_components
             field:
               type: replicator
-              display: 'more info'
+              display: website_components
               sets:
                 new_set_group:
-                  display: 'New Set Group'
+                  display: "New Set Group"
                   sets:
-                    new_set:
-                      display: 'New Set'
+                    image_with_text:
+                      display: "image with text"
                       fields:
-                        -
-                          handle: more_info_header
+                        - handle: assets
                           field:
-                            type: text
-                            display: 'more info header'
-                        -
-                          handle: more_info_description
+                            max_files: 4
+                            container: assets
+                            type: assets
+                            display: assets
+                        - handle: asset_poistion
                           field:
-                            type: textarea
-                            display: 'more info description'
-          -
-            handle: header_color
-            field:
-              type: color
-              display: 'header color'
-          -
-            handle: description_color
-            field:
-              type: color
-              display: 'description color'
-          -
-            handle: have_btn
-            field:
-              type: toggle
-              display: 'have btn'
-          -
-            handle: btn_text
-            field:
-              type: text
-              display: 'btn text'
-          -
-            handle: is_it_welcome
-            field:
-              type: toggle
-              display: 'is it welcome'
-          -
-            handle: welcom_icon
-            field:
-              type: icon
-              display: 'welcom icon'
-          -
-            handle: welcome_title
-            field:
-              type: text
-              display: 'welcome title'
-          -
-            handle: welcome_description
-            field:
-              type: textarea
-              display: 'welcome description'
-          -
-            handle: welcome_person_name
-            field:
-              type: text
-              display: 'welcome person name'
-          -
-            handle: welcome_person_position
-            field:
-              type: text
-              display: 'welcome person position'
-          -
-            handle: have_our_cores
-            field:
-              type: toggle
-              display: 'have our cores'
-          -
-            handle: our_cores
-            field:
-              type: replicator
-              display: 'our cores'
-              sets:
-                new_set_group:
-                  display: 'New Set Group'
-                  sets:
-                    new_set:
-                      display: 'New Set'
-                      fields:
-                        -
-                          handle: our_cores_bg
+                            options:
+                              - key: left
+                                value: Left
+                              - key: right
+                                value: Right
+                            type: select
+                            display: "asset poistion"
+                        - handle: asset_width
+                          field:
+                            type: width
+                            display: "asset width"
+                        - handle: icon1
                           field:
                             type: icon
-                            display: 'our cores bg'
-                        -
-                          handle: our_cores_header
+                            display: icon1
+                        - handle: icon1_position
+                          field:
+                            options:
+                              - key: top
+                                value: Top
+                              - key: left
+                                value: Left
+                              - key: bottom
+                                value: Bottom
+                              - key: right
+                                value: Right
+                              - key: top_right
+                                value: "Top Right"
+                              - key: top_left
+                                value: "Top Left"
+                              - key: bottom_right
+                                value: "Bottom Right"
+                              - key: bottom_left
+                                value: "Bottom Left"
+                            type: select
+                            display: "icon1 position"
+                        - handle: icon2
+                          field:
+                            type: icon
+                            display: icon2
+                        - handle: icon2_position
+                          field:
+                            options:
+                              - key: top
+                                value: Top
+                              - key: left
+                                value: Left
+                              - key: bottom
+                                value: Bottom
+                              - key: right
+                                value: Right
+                              - key: top_right
+                                value: "Top Right"
+                              - key: top_left
+                                value: "Top Left"
+                              - key: bottom_right
+                                value: "Bottom Right"
+                              - key: bottom_left
+                                value: "Bottom Left"
+                            type: select
+                            display: "icon2 position"
+                        - handle: have_more_than_one_asset
+                          field:
+                            type: toggle
+                            display: "have more than one asset"
+                        - handle: more_info
+                          field:
+                            type: replicator
+                            display: "more info"
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  new_set:
+                                    display: "New Set"
+                                    fields:
+                                      - handle: more_info_header
+                                        field:
+                                          type: text
+                                          display: "more info header"
+                                      - handle: more_info_description
+                                        field:
+                                          type: textarea
+                                          display: "more info description"
+                        - handle: header_color
+                          field:
+                            type: color
+                            display: "header color"
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: have_btn
+                          field:
+                            type: toggle
+                            display: "have btn"
+                        - handle: btn_text
                           field:
                             type: text
-                            display: 'our cores header'
-                        -
-                          handle: our_cores_description
+                            display: "btn text"
+                        - handle: btn_color
+                          field:
+                            type: color
+                            display: "btn color"
+                        - handle: btn_bg_color
+                          field:
+                            type: color
+                            display: "btn bg color"
+                        - handle: btn_have_icon
+                          field:
+                            type: toggle
+                            display: "btn have icon"
+                        - handle: btn_icon
+                          field:
+                            type: icon
+                            display: "btn icon"
+                        - handle: is_it_welcome
+                          field:
+                            type: toggle
+                            display: "is it welcome"
+                        - handle: welcom_icon
+                          field:
+                            type: icon
+                            display: "welcom icon"
+                        - handle: welcome_title
                           field:
                             type: text
-                            display: 'our cores description'
-      -
-        display: 'New Section'
+                            display: "welcome title"
+                        - handle: welcome_description
+                          field:
+                            type: textarea
+                            display: "welcome description"
+                        - handle: welcome_person_name
+                          field:
+                            type: text
+                            display: "welcome person name"
+                        - handle: welcome_person_position
+                          field:
+                            type: text
+                            display: "welcome person position"
+                        - handle: have_our_cores
+                          field:
+                            type: toggle
+                            display: "have our cores"
+                        - handle: our_cores
+                          field:
+                            type: replicator
+                            display: "our cores"
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  new_set:
+                                    display: "New Set"
+                                    fields:
+                                      - handle: our_cores_bg_img
+                                        field:
+                                          type: icon
+                                          display: "our cores bg img"
+                                      - handle: our_cores_header
+                                        field:
+                                          type: text
+                                          display: "our cores header"
+                                      - handle: our_cores_description
+                                        field:
+                                          type: textarea
+                                          display: "our cores description"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: backgroun_have_gradient
+                          field:
+                            type: toggle
+                            display: "backgroun have gradient"
+                        - handle: gradient
+                          field:
+                            default: "linear-gradient(90deg, #ff7e5f, #feb47b)"
+                            type: text
+                            display: gradient
+                    stats:
+                      display: stats
+                      fields:
+                        - handle: stats
+                          field:
+                            type: replicator
+                            display: stats
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  new_set:
+                                    display: "New Set"
+                                    fields:
+                                      - handle: text_color
+                                        field:
+                                          type: color
+                                          display: "text color"
+                                      - handle: background_image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "background image"
+                                      - handle: prefix
+                                        field:
+                                          type: text
+                                          display: prefix
+                                      - handle: value
+                                        field:
+                                          type: text
+                                          display: value
+                                      - handle: description
+                                        field:
+                                          type: text
+                                          display: description
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                    programs:
+                      display: programs
+                      fields:
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: description
+                          field:
+                            type: textarea
+                            display: description
+                        - handle: programs
+                          field:
+                            type: replicator
+                            display: programs
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  program:
+                                    display: program
+                                    fields:
+                                      - handle: program_asset
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "program asset"
+                                      - handle: text
+                                        field:
+                                          type: text
+                                          display: text
+                                      - handle: url
+                                        field:
+                                          type: text
+                                          display: url
+                                      - handle: have_icon
+                                        field:
+                                          type: toggle
+                                          display: "have icon"
+                                      - handle: icon
+                                        field:
+                                          type: icon
+                                          display: icon
+                                      - handle: have_btn
+                                        field:
+                                          type: toggle
+                                          display: "have btn"
+                                      - handle: btn_text
+                                        field:
+                                          type: text
+                                          display: "btn text"
+                        - handle: header_color
+                          field:
+                            type: color
+                            display: "header color"
+                        - handle: description_color
+                          field:
+                            type: text
+                            display: "description color"
+                    leadership_swiper:
+                      display: "leadership swiper"
+                      fields:
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: leaders
+                          field:
+                            type: replicator
+                            display: leaders
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  leader:
+                                    display: leader
+                                    fields:
+                                      - handle: leader_name
+                                        field:
+                                          type: text
+                                          display: "leader name"
+                                      - handle: leader_position
+                                        field:
+                                          type: text
+                                          display: "leader position"
+                                      - handle: photo_icon
+                                        field:
+                                          type: icon
+                                          display: "photo icon"
+                                      - handle: leader_image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "leader image"
+                                      - handle: background_color
+                                        field:
+                                          type: color
+                                          display: "background color"
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                    our_achievements:
+                      display: "our achievements"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: achievements
+                          field:
+                            type: replicator
+                            display: achievements
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  image:
+                                    display: image
+                                    fields:
+                                      - handle: image
+                                        field:
+                                          container: assets
+                                          type: assets
+                                          display: image
+                    up_to_date_swiper:
+                      display: "up to date swiper"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: swiper_item
+                          field:
+                            type: replicator
+                            display: "swiper item"
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      - handle: post_asset
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "post asset"
+                                      - handle: platform
+                                        field:
+                                          type: text
+                                          display: platform
+                                      - handle: platform_icon
+                                        field:
+                                          type: icon
+                                          display: "platform icon"
+                                      - handle: post_date
+                                        field:
+                                          type: date
+                                          display: "post date"
+                                      - handle: post_description
+                                        field:
+                                          type: textarea
+                                          display: "post description"
+                                      - handle: post_link
+                                        field:
+                                          type: text
+                                          display: "post link"
+                    banner_box:
+                      display: banner_box
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: box_asset
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: "box asset"
+                        - handle: box_overlay_color
+                          field:
+                            type: color
+                            display: "box overlay color"
+                        - handle: box_header
+                          field:
+                            type: text
+                            display: "box header"
+                        - handle: box_description
+                          field:
+                            type: textarea
+                            display: "box description"
+                        - handle: have_btn
+                          field:
+                            type: toggle
+                            display: "have btn"
+                        - handle: btn_text
+                          field:
+                            type: text
+                            display: "btn text"
+                        - handle: btn_url
+                          field:
+                            type: text
+                            display: "btn url"
+                        - handle: open_in_new_tab
+                          field:
+                            type: toggle
+                            display: "btn open in new tab"
+                    where_next:
+                      display: "where next"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: links
+                          field:
+                            type: replicator
+                            display: links
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  link:
+                                    display: link
+                                    fields:
+                                      - handle: title
+                                        field:
+                                          type: text
+                                          display: title
+                                      - handle: url
+                                        field:
+                                          type: text
+                                          display: url
+                                      - handle: open_in_new_tab
+                                        field:
+                                          type: toggle
+                                          display: "open in new tab"
+                                      - handle: icon
+                                        field:
+                                          type: icon
+                                          display: icon
+                    why_jpgs:
+                      display: "why jpgs"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: levels
+                          field:
+                            type: replicator
+                            display: levels
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  level:
+                                    display: level
+                                    fields:
+                                      - handle: title
+                                        field:
+                                          type: text
+                                          display: title
+                                      - handle: levels_list
+                                        field:
+                                          type: replicator
+                                          display: "levels list"
+                                          sets:
+                                            new_set_group:
+                                              display: "New Set Group"
+                                              sets:
+                                                level:
+                                                  display: level
+                                                  fields:
+                                                    - handle: title
+                                                      field:
+                                                        type: text
+                                                        display: title
+                                                    - handle: number
+                                                      field:
+                                                        type: integer
+                                                        display: number
+                                                    - handle: prefix
+                                                      field:
+                                                        type: text
+                                                        display: prefix
+                    jpgs_history:
+                      display: "jpgs history"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: history_items
+                          field:
+                            type: replicator
+                            display: "history items"
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  history_item:
+                                    display: "history item"
+                                    fields:
+                                      - handle: year
+                                        field:
+                                          type: integer
+                                          display: year
+                                      - handle: history_asset
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "history asset"
+                                      - handle: description
+                                        field:
+                                          type: textarea
+                                          display: description
+                    our_staff:
+                      display: "our staff"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: staff_items
+                          field:
+                            type: replicator
+                            display: "staff items"
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  staff_item:
+                                    display: "staff item"
+                                    fields:
+                                      - handle: position
+                                        field:
+                                          options:
+                                            - key: senior
+                                              value: "Senior Team Leader"
+                                          type: select
+                                          display: position
+                                      - handle: person_image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "person image"
+                                      - handle: person_name
+                                        field:
+                                          type: text
+                                          display: "person name"
+                                      - handle: person_position
+                                        field:
+                                          type: text
+                                          display: "person position"
+                    school_policies:
+                      display: "school policies"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: header_icon
+                          field:
+                            type: icon
+                            display: "header icon"
+                        - handle: items
+                          field:
+                            type: replicator
+                            display: items
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      - handle: url
+                                        field:
+                                          type: text
+                                          display: url
+                                      - handle: open_in_new_tab
+                                        field:
+                                          type: toggle
+                                          display: "open in new tab"
+                                      - handle: title
+                                        field:
+                                          type: text
+                                          display: title
+                                      - handle: icon
+                                        field:
+                                          type: icon
+                                          display: icon
+                    parallex_section:
+                      display: "parallex section"
+                      fields:
+                        - handle: parallex_asset
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: "parallex asset"
+                        - handle: parallex_overlay_color
+                          field:
+                            type: color
+                            display: "parallex overlay color"
+                        - handle: parallex_overlay_color_opacity
+                          field:
+                            type: range
+                            display: "parallex overlay color opacity"
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                    learning_through_play:
+                      display: "learning Through play"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: header_position
+                          field:
+                            options:
+                              - key: left
+                                value: Left
+                              - key: center
+                                value: Center
+                              - key: right
+                                value: Right
+                            type: select
+                            display: "header position"
+                        - handle: swiper_items
+                          field:
+                            type: replicator
+                            display: "swiper items"
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  swiper_item:
+                                    display: "swiper item"
+                                    fields:
+                                      - handle: item_asset
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "item asset"
+                                      - handle: header
+                                        field:
+                                          type: text
+                                          display: header
+                                      - handle: description
+                                        field:
+                                          type: textarea
+                                          display: description
+                    wonder_adventure:
+                      display: "wonder adventure"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: items
+                          field:
+                            type: replicator
+                            display: items
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      - handle: background_image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "background image"
+                                      - handle: icon
+                                        field:
+                                          type: icon
+                                          display: icon
+                                      - handle: description
+                                        field:
+                                          type: text
+                                          display: description
+                                      - handle: description_color
+                                        field:
+                                          type: color
+                                          display: "description color"
+                    why_choose:
+                      display: "why choose"
+                      fields:
+                        - handle: items
+                          field:
+                            type: replicator
+                            display: items
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      - handle: background_image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "background image"
+                                      - handle: description
+                                        field:
+                                          type: text
+                                          display: description
+                                      - handle: description_color
+                                        field:
+                                          type: color
+                                          display: "description color"
+                                      - handle: title
+                                        field:
+                                          type: text
+                                          display: title
+                                      - handle: title_color
+                                        field:
+                                          type: color
+                                          display: "title color"
+                        - handle: icon
+                          field:
+                            type: icon
+                            display: icon
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                    class_offers:
+                      display: "class offers"
+                      fields:
+                        - handle: header
+                          field:
+                            type: text
+                            display: header
+                        - handle: header_color
+                          field:
+                            type: text
+                            display: "header color"
+                        - handle: description
+                          field:
+                            type: text
+                            display: description
+                        - handle: description_color
+                          field:
+                            type: color
+                            display: "description color"
+                        - handle: background_color
+                          field:
+                            type: color
+                            display: "background color"
+                        - handle: padding_top
+                          field:
+                            type: integer
+                            display: "padding top"
+                        - handle: padding_bottom
+                          field:
+                            type: integer
+                            display: "padding bottom"
+                        - handle: margin_top
+                          field:
+                            type: integer
+                            display: "margin top"
+                        - handle: margin_bottom
+                          field:
+                            type: integer
+                            display: "margin bottom"
+                        - handle: items
+                          field:
+                            type: replicator
+                            display: items
+                            sets:
+                              new_set_group:
+                                display: "New Set Group"
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      - handle: background_image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: "background image"
+                                      - handle: icon
+                                        field:
+                                          type: icon
+                                          display: icon
+                                      - handle: title
+                                        field:
+                                          type: text
+                                          display: title
+                                      - handle: title_color
+                                        field:
+                                          type: color
+                                          display: "title color"
+                                      - handle: description
+                                        field:
+                                          type: textarea
+                                          display: description
+                                      - handle: description_color
+                                        field:
+                                          type: color
+                                          display: "description color"
+                                      - handle: have_btn
+                                        field:
+                                          type: toggle
+                                          display: "have btn"
+                                      - handle: btn_text
+                                        field:
+                                          type: text
+                                          display: "btn text"
+                                      - handle: btn_have_icon
+                                        field:
+                                          type: toggle
+                                          display: "btn have icon"
+                                      - handle: btn_icon
+                                        field:
+                                          type: icon
+                                          display: "btn icon"
+                                      - handle: btn_background_color
+                                        field:
+                                          type: color
+                                          display: "btn background color"
+                                      - handle: btn_link
+                                        field:
+                                          type: text
+                                          display: "btn link"
+                                      - handle: btn_open_in_new_tab
+                                        field:
+                                          type: integer
+                                          display: "btn open in new tab"
   sidebar:
     display: Sidebar
     sections:
-      -
-        fields:
-          -
-            handle: slug
+      - fields:
+          - handle: slug
             field:
               type: slug
               localizable: true
-              validate: 'max:200'
-          -
-            handle: parent
+              validate: "max:200"
+          - handle: parent
             field:
               type: entries
               collections:
@@ -299,8 +1438,3 @@ tabs:
               max_items: 1
               listable: false
               localizable: true
-  new_tab:
-    display: 'New Tab'
-    sections:
-      -
-        display: 'New Section'
