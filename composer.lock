@@ -4613,16 +4613,16 @@
         },
         {
             "name": "statamic/cms",
-            "version": "v5.64.0",
+            "version": "v5.65.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/statamic/cms.git",
-                "reference": "d1e056b3be05d2df0bcbd92a818d11b08eff9e8c"
+                "reference": "3a8f3cd749db62f3dcc6efba82c66aceebd3ce67"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/statamic/cms/zipball/d1e056b3be05d2df0bcbd92a818d11b08eff9e8c",
-                "reference": "d1e056b3be05d2df0bcbd92a818d11b08eff9e8c",
+                "url": "https://api.github.com/repos/statamic/cms/zipball/3a8f3cd749db62f3dcc6efba82c66aceebd3ce67",
+                "reference": "3a8f3cd749db62f3dcc6efba82c66aceebd3ce67",
                 "shasum": ""
             },
             "require": {
@@ -4692,7 +4692,14 @@
                 ],
                 "psr-4": {
                     "Statamic\\": "src/"
-                }
+                },
+                "exclude-from-classmap": [
+                    "tests/Auth/Eloquent/__migrations__/**",
+                    "tests/StarterKits/__fixtures__/**",
+                    "tests/Translator/__fixtures__/**",
+                    "tests/Console/Kernel.php",
+                    "src/Console/Please/app-kernel.php"
+                ]
             },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
@@ -4707,7 +4714,7 @@
             ],
             "support": {
                 "issues": "https://github.com/statamic/cms/issues",
-                "source": "https://github.com/statamic/cms/tree/v5.64.0"
+                "source": "https://github.com/statamic/cms/tree/v5.65.0"
             },
             "funding": [
                 {
@@ -4715,7 +4722,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-21T16:31:58+00:00"
+            "time": "2025-09-08T22:27:51+00:00"
         },
         {
             "name": "statamic/eloquent-driver",

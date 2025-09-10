@@ -1,0 +1,48 @@
+title: 'new page'
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              required: true
+  components:
+    display: components
+    sections:
+      -
+        display: banner
+        instructions: '<span class="tooltip">?<span class="tooltip-content"><img src="/images/help/price-guide.png" width="200"></span></span>'
+        fields:
+          -
+            handle: website_components
+            field:
+              type: replicator
+              display: 'website components'
+              sets:
+                new_set_group:
+                  display: 'New Set Group'
+                  sets:
+                    new_set:
+                      display: 'New Set'
+                      instructions: '<span class="tooltip">?<span class="tooltip-content"><img src="/images/help/price-guide.png" width="200"></span></span>'
+                      icon: user-avatar
+                      fields:
+                        -
+                          handle: test
+                          field:
+                            type: text
+                            display: test
+  sidebar:
+    sections:
+      -
+        fields:
+          -
+            handle: slug
+            field:
+              type: slug
+              localizable: true
+              validate: 'max:200'

@@ -1,0 +1,11 @@
+tree:
+  -
+    id: 9dfe2c2d-07c5-4d79-b518-05d8f23917fd
+    title: FAQ
+    url: /faq
+  -
+    id: 1e83a7fc-a9ed-4c50-abd4-ae2ed438d44e
+    title: 'Pupils Portal'
+    url: google.com
+    data:
+      open_in_new_tab: true

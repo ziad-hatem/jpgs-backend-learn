@@ -1,0 +1,15 @@
+tree:
+  -
+    id: 1c239d8f-cc0f-4f0e-ad37-250bb57fd2c0
+    title: 'About Us'
+    url: /about
+    data:
+      image:
+        - poster.webp
+      description: test
+      parent: true
+    children:
+      -
+        id: 8f301f25-29e8-41f4-979f-755d51865dd5
+        title: 'Headmaster’s Welcome'
+        url: /test

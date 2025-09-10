@@ -1,0 +1,9 @@
+tree:
+  -
+    id: 08bfab64-8f6c-4779-9f8f-ef2a29e11baa
+    title: School
+    children:
+      -
+        id: 58813430-91ee-47f7-867d-78471e9e8a19
+        title: test
+        url: /test

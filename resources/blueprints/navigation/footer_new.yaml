@@ -1,0 +1,21 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: title
+            field:
+              type: text
+              display: title
+          -
+            handle: url
+            field:
+              type: text
+              display: url
+          -
+            handle: icon
+            field:
+              type: icon
+              display: icon
