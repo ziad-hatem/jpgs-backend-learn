@@ -1,0 +1,21 @@
+title: 'Journey With Us'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: title
+  -
+    handle: description
+    field:
+      type: textarea
+      display: description
+  -
+    handle: image
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: image
+  -
+    import: button

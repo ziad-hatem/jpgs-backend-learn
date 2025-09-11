@@ -1,0 +1,17 @@
+title: 'available positions'
+fields:
+  -
+    handle: select_field
+    field:
+      options:
+        -
+          key: left
+          value: Left
+        -
+          key: center
+          value: Center
+        -
+          key: right
+          value: Right
+      type: select
+      display: 'Select Field'

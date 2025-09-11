@@ -1,0 +1,11 @@
+title: 'available colors'
+fields:
+  -
+    handle: color_field
+    field:
+      swatches:
+        - '#fff'
+        - '#262261'
+      default: '#ffffff'
+      type: color
+      display: 'Color Field'

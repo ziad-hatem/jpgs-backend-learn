@@ -1,0 +1,21 @@
+title: 'section header'
+fields:
+  -
+    handle: title
+    field:
+      type: text
+      display: title
+  -
+    import: available_colors
+    prefix: 'title color'
+  -
+    handle: description
+    field:
+      type: textarea
+      display: description
+  -
+    import: available_colors
+    prefix: 'description color'
+  -
+    import: available_positions
+    prefix: 'header position'

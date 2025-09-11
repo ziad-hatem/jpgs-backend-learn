@@ -1,13 +1,6 @@
 title: 'base component new'
 fields:
   -
-    handle: section_image
-    field:
-      max_files: 1
-      container: assets
-      type: assets
-      display: 'Section Image'
-  -
     handle: background_color
     field:
       swatches:

@@ -10,12 +10,13 @@ tabs:
             field:
               type: text
               required: true
+              validate:
+                - required
   components:
     display: components
     sections:
       -
         display: banner
-        instructions: '<span class="tooltip">?<span class="tooltip-content"><img src="/images/help/price-guide.png" width="200"></span></span>'
         fields:
           -
             handle: website_components
@@ -26,17 +27,266 @@ tabs:
                 new_set_group:
                   display: 'New Set Group'
                   sets:
-                    new_set:
-                      display: 'New Set'
-                      instructions: '<span class="tooltip">?<span class="tooltip-content"><img src="/images/help/price-guide.png" width="200"></span></span>'
-                      icon: user-avatar
+                    big_banner:
+                      display: 'Big Banner'
+                      instructions: '<img src="http://127.0.0.1:8000/assets/screenshot-2025-09-10-at-12.33.01-pm.png" width="400">'
+                      icon: alert-help-question
                       fields:
                         -
-                          handle: test
+                          import: base_component_new
+                        -
+                          import: section_header
+                        -
+                          import: button
+                    small_banner:
+                      display: 'small banner'
+                      instructions: '<img src="http://127.0.0.1:8000/assets/screenshot-2025-09-10-at-12.33.01-pm.png" width="400">'
+                      icon: alert-help-question
+                      fields:
+                        -
+                          import: base_component_new
+                        -
+                          import: section_header
+                    school_insight:
+                      display: 'school insight'
+                      instructions: '<img src="http://127.0.0.1:8000/assets/screenshot-2025-09-10-at-12.33.01-pm.png" width="400">'
+                      icon: alert-help-question
+                      fields:
+                        -
+                          import: section_header
+                        -
+                          import: available_positions
+                          prefix: 'image positions'
+                        -
+                          handle: images
+                          field:
+                            max_files: 4
+                            container: assets
+                            type: assets
+                            display: images
+                    stats:
+                      display: stats
+                      instructions: '<img src="http://127.0.0.1:8000/assets/screenshot-2025-09-10-at-12.33.01-pm.png" width="400">'
+                      icon: alert-help-question
+                      fields:
+                        -
+                          import: available_colors
+                          prefix: 'background color'
+                        -
+                          handle: background_image
+                          field:
+                            max_files: 1
+                            container: assets
+                            type: assets
+                            display: 'background image'
+                        -
+                          handle: text
                           field:
                             type: text
-                            display: test
+                            display: text
+                        -
+                          handle: prefix
+                          field:
+                            type: text
+                            display: prefix
+                        -
+                          handle: description
+                          field:
+                            type: text
+                            display: description
+                        -
+                          import: available_colors
+                          prefix: 'text color'
+                    programmes:
+                      display: Programmes
+                      instructions: '<img src="http://127.0.0.1:8000/assets/screenshot-2025-09-10-at-12.33.01-pm.png" width="400">'
+                      icon: alert-help-question
+                      fields:
+                        -
+                          import: section_header
+                        -
+                          import: available_colors
+                          prefix: 'background colors'
+                        -
+                          handle: items
+                          field:
+                            type: replicator
+                            display: items
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      -
+                                        handle: image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: image
+                                      -
+                                        handle: title
+                                        field:
+                                          type: text
+                                          display: title
+                        -
+                          import: button
+                    testimonials:
+                      display: Testimonials
+                      fields:
+                        -
+                          import: section_header
+                        -
+                          import: available_colors
+                          prefix: 'background color'
+                        -
+                          import: asset
+                    leadership:
+                      display: leadership
+                      fields:
+                        -
+                          import: section_header
+                        -
+                          import: available_colors
+                          prefix: 'background color'
+                        -
+                          handle: items
+                          field:
+                            type: replicator
+                            display: items
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      -
+                                        handle: name
+                                        field:
+                                          type: text
+                                          display: name
+                                      -
+                                        handle: position
+                                        field:
+                                          type: text
+                                          display: position
+                                      -
+                                        handle: image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: image
+                    achievements:
+                      display: Achievements
+                      fields:
+                        -
+                          import: section_header
+                        -
+                          handle: items
+                          field:
+                            type: replicator
+                            display: items
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      -
+                                        handle: image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: image
+                    stay_up_to_date:
+                      display: 'Stay Up to Date'
+                      fields:
+                        -
+                          import: section_header
+                        -
+                          import: available_colors
+                          prefix: 'background color'
+                        -
+                          handle: items
+                          field:
+                            type: replicator
+                            display: items
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  item:
+                                    display: item
+                                    fields:
+                                      -
+                                        handle: image
+                                        field:
+                                          max_files: 1
+                                          container: assets
+                                          type: assets
+                                          display: image
+                                      -
+                                        handle: platform_name
+                                        field:
+                                          type: text
+                                          display: 'platform name'
+                                      -
+                                        handle: platform_icon
+                                        field:
+                                          type: icon
+                                          display: 'platform icon'
+                                      -
+                                        handle: description
+                                        field:
+                                          type: textarea
+                                          display: description
+                                      -
+                                        handle: date
+                                        field:
+                                          type: date
+                                          display: date
+                    journey_with_us:
+                      display: 'Journey With Us'
+                      instructions: '<img src="http://127.0.0.1:8000/assets/screenshot-2025-09-10-at-12.33.01-pm.png" width="400">'
+                      icon: alert-help-question
+                      fields:
+                        -
+                          import: journey_with_us
+                    where_next:
+                      display: 'Where Next?'
+                      fields:
+                        -
+                          import: section_header
+                        -
+                          handle: more_links
+                          field:
+                            type: replicator
+                            display: 'more links'
+                            sets:
+                              new_set_group:
+                                display: 'New Set Group'
+                                sets:
+                                  link:
+                                    display: link
+                                    fields:
+                                      -
+                                        handle: title
+                                        field:
+                                          type: text
+                                          display: title
+                                      -
+                                        handle: url
+                                        field:
+                                          type: text
+                                          display: url
   sidebar:
+    display: Sidebar
     sections:
       -
         fields:

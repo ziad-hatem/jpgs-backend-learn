@@ -1,0 +1,26 @@
+title: 'Asset Handle'
+fields:
+  -
+    handle: asset
+    field:
+      max_files: 1
+      container: assets
+      type: assets
+      display: asset
+  -
+    handle: have_video
+    field:
+      type: toggle
+      display: 'have video'
+  -
+    handle: image_position
+    field:
+      options:
+        -
+          key: left
+          value: Left
+        -
+          key: right
+          value: Right
+      type: select
+      display: 'image position'

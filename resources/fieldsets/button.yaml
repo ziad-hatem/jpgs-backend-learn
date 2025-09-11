@@ -1,0 +1,18 @@
+title: button
+fields:
+  -
+    handle: show_button
+    field:
+      default: true
+      type: toggle
+      display: 'show button'
+  -
+    handle: button_text
+    field:
+      type: text
+      display: 'button text'
+  -
+    handle: button_url
+    field:
+      type: text
+      display: 'button url'

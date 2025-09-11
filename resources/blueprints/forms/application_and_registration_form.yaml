@@ -1,0 +1,46 @@
+tabs:
+  main:
+    display: Main
+    sections:
+      -
+        fields:
+          -
+            handle: parent_name
+            field:
+              type: text
+              display: 'parent name'
+          -
+            handle: mobile_number
+            field:
+              type: text
+              display: 'mobile number'
+          -
+            handle: email_address
+            field:
+              type: text
+              display: 'email address'
+          -
+            handle: nationality
+            field:
+              type: text
+              display: nationality
+          -
+            handle: childs_name
+            field:
+              type: text
+              display: "child's name"
+          -
+            handle: childs_birth_date
+            field:
+              type: text
+              display: 'childs birth date'
+          -
+            handle: parent_school
+            field:
+              type: text
+              display: 'parent school'
+          -
+            handle: where_did_you_hear_about_us
+            field:
+              type: text
+              display: 'where did you hear about us'
